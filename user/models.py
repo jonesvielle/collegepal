@@ -1,7 +1,19 @@
 from pydantic import BaseModel
 
 class CreateCommunity(BaseModel):
-    comunityName:str
+    communityName:str
     picture:str
-    descriptiion:str
+    description:str
     population:int
+    school:str
+    password:str
+    # admin
+
+class UpdateCommunity(BaseModel):
+    communityId:str
+
+class JoinCommunity(BaseModel):
+    communityName:str
+    firstName:str
+    lastName:str
+    email:str
